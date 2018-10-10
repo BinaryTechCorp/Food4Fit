@@ -1,0 +1,156 @@
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('#area_usuario').click(function(){
+            var visivel  = $('#menu_usuario').is(':visible');
+            if (visivel) {
+                $('#menu_usuario').hide();
+            } else {
+                $('#menu_usuario').show();
+            } 
+
+        });
+
+        $('#carrinho').click(function(){
+            var visivel  = $('#lista_pedidos').is(':visible');
+            if (visivel) {
+                $('#lista_pedidos').fadeOut(400);
+            }else{
+                $('#lista_pedidos').fadeIn(400);
+            }
+        });
+
+        $('.sair_carrinho').click(function(){
+            $('#lista_pedidos').fadeOut(400);
+        });
+
+        $('#pesquisa').click(function(){
+            var visivel  = $('#frm_pesquisa').is(':visible');
+            if (visivel) {
+                $('#frm_pesquisa').hide();
+            } else {
+                $('#frm_pesquisa').show();
+            } 
+        });
+
+    });
+</script>
+
+<header> 
+
+    <div id="lista_pedidos">
+        <img src="Imagens/Icones/fechar.png" alt="Fechar" class="sair_carrinho">
+        <div id="titulo_area"> Suas Compras </div>
+        <p> Nenhum produto adicionado. </p>
+    </div>       
+
+    <div class="linha"> 
+        <div class="coluna-01">
+            <!-- Espaço -->
+        </div>
+
+        <div class="coluna-05" id="logo_site">
+            Food 4Fit
+        </div>
+        <div class="coluna-06">
+
+            <div class="coluna-06">
+                <form name="frm_pesquisa" method="get" action="#" id="frm_pesquisa">
+                    <input type="text" name="pesquisa" placeholder="Pesquisar..." id="input_pesquisa">
+                </form>
+            </div>
+
+            <div class="coluna-02 itens_cabecalho" id="pesquisa">
+                <img src="Imagens/Icones/search.png" alt="Procurar" class="icones">
+
+            </div>
+
+            <div class="coluna-02 itens_cabecalho" id="carrinho">
+                <div id="quantidade_carrinho"> 
+                    0
+                </div>
+                <img src="Imagens/Icones/carrinho.png" alt="Carrinho de compras">
+
+            </div>
+
+            <div class="coluna-02 itens_cabecalho" id="area_usuario">
+                <img src="Imagens/Icones/usu%C3%A1rio.png" alt="Areá do usuário" class="icones">
+
+                <div id="menu_usuario">
+                    <div class="botoes_usuario">
+                        Entre 
+                    </div>
+                    ou 
+                    <div class="botoes_usuario">
+                        Cadastra-se
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div> 
+
+    <div class="linha" id="menu_paginas">
+
+        <nav class="coluna-12" id="nav_paginas">
+            <div class="item_menu">
+                <a href="#">
+                    <img src="Imagens/Icones/home.png" alt="Home" title="Ir para Home">
+                </a>
+            </div>
+
+            <div class="item_menu">
+                <a href="#">
+                    Meu personal fitness
+                </a>
+            </div>
+
+            <div class="item_menu">
+                <a href="#">
+                    Dicas de saúde
+                </a>
+            </div>
+
+            <div class="item_menu">
+                <a href="#">
+                    Casos de sucesso
+                </a>
+            </div>
+
+            <div class="item_menu">
+                <a href="#">
+                    Vantagens e Benefícios
+                </a>
+            </div>
+
+            <div class="item_menu">
+                <a href="#">
+                    Fórum
+                </a>
+            </div>
+
+            <div class="item_menu">
+                <a href="#">
+                    Fale Conosco
+                </a>
+            </div>
+
+        </nav>
+
+    </div>
+</header>        
+
+<div class="linha" id="cabecalho_paginas">
+    <div id="nome_pagina">
+        Meu personal fitness
+    </div>
+    <div id="linha_fundo"></div>
+</div>
+
+
+
