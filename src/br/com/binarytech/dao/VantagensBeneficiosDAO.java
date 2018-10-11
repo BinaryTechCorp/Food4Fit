@@ -160,7 +160,7 @@ public class VantagensBeneficiosDAO {
 			while(rs.next()) {
 				InformacaoSite informacaoSite = new InformacaoSite();
 				informacaoSite.setAssunto("VANTAGENS");
-				informacaoSite.setFoto(rs.getString("foto"));
+				//informacaoSite.setFoto(rs.getString("foto"));
 				informacaoSite.setIdInformacaoSite(rs.getInt("idInformacaoSite"));
 				informacaoSite.setStatus(rs.getBoolean("status"));
 				informacaoSite.setTexto(rs.getString("texto"));

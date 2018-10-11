@@ -4,8 +4,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import br.com.binarytech.jdbc.BancoWEB;
-=======
->>>>>>> origin/master
 import br.com.binarytech.model.UsuarioCms;
 
 public class UsuarioCmsDAO{

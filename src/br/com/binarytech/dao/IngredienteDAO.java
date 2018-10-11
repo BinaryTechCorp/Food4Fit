@@ -4,9 +4,14 @@ import br.com.binarytech.model.Ingrediente;
 
 public class IngredienteDAO{
 
-	public static Boolean gravar(Ingrediente ingrediente){ return true;}                    
+	public static Boolean gravar(Ingrediente ingrediente){ 
+		return true;
+		}                    
 
-	public static Boolean editar(Ingrediente ingrediente){ return true;}  
+	public static Boolean editar(Ingrediente ingrediente){ 
+		Ingrediente i = new Ingrediente();
+		
+		return true;}  
 
 	public static Boolean deletar(int idIngrediente){ return true;}  
 

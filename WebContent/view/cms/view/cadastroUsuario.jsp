@@ -1,7 +1,7 @@
 <%@page import="br.com.binarytech.model.Cargo"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <%@ page import="br.com.binarytech.dao.CargoDAO"%>
 
 <%	
@@ -62,7 +62,7 @@
 
 <div class="coluna-12">
     <div class="linha" id="nome_pagina">
-        Cadastrar Usuário 
+        Cadastrar UsuÃ¡rio 
     </div>
     
     <div class="linha">
@@ -90,8 +90,8 @@
             </div>
 
             <div class="coluna-06">
-                <label for="codigo"> Código </label> <br>
-                <input type="tel" id="codigo" name="codigo" class="inputsFiltro" placeholder="Digite o código do funcionário">
+                <label for="codigo"> CÃ³digo </label> <br>
+                <input type="tel" id="codigo" name="codigo" class="inputsFiltro" placeholder="Digite o cÃ³digo do funcionÃ¡rio">
 
                 <input type='submit' id="filtroFuncionario" value="">
 
@@ -100,12 +100,12 @@
     </div>
     
    <div class="linha">
-       <strong> Lista de funcionários: </strong> <br>
+       <strong> Lista de funcionÃ¡rios: </strong> <br>
 
         <div class="linha" id="header_tabelaUsuarios">
 
             <div class="coluna-03">
-                Código
+                CÃ³digo
             </div>    
 
             <div class="coluna-03">
@@ -146,7 +146,7 @@
     </div>   
     
     <div class="linha">
-        <strong> Informações do Usuário: </strong> <br>
+        <strong> InformaÃ§Ãµes do UsuÃ¡rio: </strong> <br>
 
         <div class="linha">
             <div class="coluna-04">
@@ -203,7 +203,7 @@
         
         <form name="formCadastroUsuario" id="formCadastroUsuario" method="post" action="#" data-idFuncionario="">
             <div class="linha">
-	            <strong> Login do Usuário: </strong> <br>
+	            <strong> Login do UsuÃ¡rio: </strong> <br>
 	
 	            <div class="linha">
 	                <div class="coluna-06">
@@ -228,7 +228,7 @@
 	        </div>
             
             <div class="linha">
-                <strong> Permissões do Usuário: </strong> <br>
+                <strong> PermissÃµes do UsuÃ¡rio: </strong> <br>
 	            <div class="linha">
                     <div class="coluna-03 selectNivel">
 	                    <input type="radio" name="permissoes[]" value="2" class="checkbox_permissoes">
