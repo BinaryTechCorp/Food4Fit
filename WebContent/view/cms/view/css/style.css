@@ -1,0 +1,858 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Verdana", Gadget, sans-serif;
+    font-size: 16px;
+    outline: none;
+    text-decoration: none;
+    /*border: 1px solid black;*/
+}
+
+
+body {
+    height: 100%;
+    outline: none;
+}
+
+h1{
+    font-weight: normal;
+}
+
+a:visited, a:link, a:active {
+    color: #4a4848;
+}
+
+input, textarea, button {
+    outline: none;
+    border: 1px solid #e0d6d6;
+    
+}
+
+input:hover, input:focus, input:active, textarea:hover, textarea:focus, textarea:active {
+    -webkit-box-shadow: 0px 0px 4px 2px #e0d6d6;
+    box-shadow: 0px 0px 4px 2px #e0d6d6;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.linha::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="coluna-"] {
+    float: left;
+    padding: 10px;
+}
+
+.coluna-01 {
+    width: 8.33%;
+}
+.coluna-02 {
+    width: 16.66%;
+}
+.coluna-03 {
+    width: 25%;
+}
+.coluna-04 {
+    width: 33.33%;
+}
+.coluna-05 {
+    width: 41.66%;
+}
+.coluna-06 {
+    width: 50%;
+}
+.coluna-07 {
+    width: 58.33%;
+}
+.coluna-08 {
+    width: 66.66%;
+}
+.coluna-09 {
+    width: 75%;
+}
+.coluna-10 {
+    width: 83.33%;
+}
+.coluna-11 {
+    width: 91.66%;
+}
+.coluna-12 {
+    width: 100%;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.direita {
+    float: right;
+}
+
+.botao_adicionar {
+	float: right;
+    cursor: pointer;
+}
+
+#nome_pagina{
+    height: 80px;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    color:white;
+    background-color: #605154;
+    border-radius: 10px;
+    line-height: 80px;
+    vertical-align: middle;
+}
+
+#nome_pagina a{
+    float: right;
+    height: 80px;
+    width: 50px;
+    margin-right: 15px;
+    padding-top: 10px;
+}
+
+
+/*** Início - Cabeçalho ***/
+header {
+    width: 100%;
+    min-height: 15%;
+    overflow: auto;
+    border-bottom: 2px solid #a8a3a3;
+    
+}
+
+.caixa_usuario{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #c3bfbf;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.caixa_usuario img{
+    width: 50px;
+    height: 50px;
+    
+}
+
+.nivel_usuario{
+    width: 100%;
+    height: 50px;
+   /* background-color: aqua;*/
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+#nivel_logado{
+    
+    border: 3px solid #c3bfbf !important;
+    background-color: #e3e1e1;
+}
+
+#sair{
+    width: 100%;
+    height: 90px;
+    border: 1px solid #e8e3e3;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#sair img{
+    margin-top: 10px;
+}
+
+
+#nome_sistema{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#nome_site{
+    color: #31aa40;
+    font-size: 26px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+}
+
+/*** Fim - Cabeçalho ***/
+
+
+/*** Formatação Menu lateral ***/
+#menu_lateral{
+    height: 90%;
+    border-bottom-right-radius: 4px;
+    left: 0px;
+    background-color: #f4f2f2;
+    padding: 15px;
+}
+
+.separador{
+    border-color: #100b03;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.menu_paginas{
+    width: 90%;
+    min-height: 40px;
+    float: right;
+}
+
+.menu_itens{
+    text-align: justify;
+    height: 35px;
+    width: 100%;
+    cursor: pointer;
+    
+    font-weight: bold;
+   
+}
+
+.menu_itens:hover> p{
+    color: #646060;
+    font-style: italic;
+}
+
+/*** Fim menu lateral***/
+
+
+/*** Inicio - Index ***/
+
+#introducao{
+    max-width: 800px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+
+#primeira_linha img{
+    margin-right: 25px;
+    margin-top: 10px;
+    float: left;
+    width: 128px;
+    height: 128px;
+}
+
+#primeira_linha{
+    height: 130px;
+    width: 100%;
+    margin-bottom: 60px;
+    
+}
+
+#primeira_linha span{
+    font-size: 35px;
+    float: left;
+    margin-top: 35px;
+    color: #817b7b;
+}
+
+#segunda_linha{
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 80px;
+    
+}
+
+#segunda_linha strong{
+    font-size: 28px;
+    font-style: italic;
+}
+
+#terceira_linha{
+    font-size: 16px;
+    color: #939292;
+    font-style: italic;
+    
+    
+}
+
+
+/*** FIM - Index ***/
+
+
+/** Início - Básico ***/
+main {
+    width: 100%;
+    min-height: 700px;
+    overflow: hidden;
+}
+
+section {
+    padding-bottom: 0px;
+    min-height: 780px;
+    height: auto;
+    overflow: hidden;
+    background-color: white;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    padding-top: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    float: left;
+}
+/** Fim - Básico ***/
+
+/*** Inicio Login ***/
+#login{
+    background-color: #f4eaea;
+}
+
+#caixa_login{
+    min-height: 350px;
+    overflow: auto;
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    padding: 20px;
+}
+
+#login_introducao{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#login_titulo{
+    margin-bottom: 30px;
+}
+
+.icone_login{
+    width: 50px;
+    height: 50px;
+    border:1px solid #d1d0d0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding: 12px;
+    float: left;
+}
+
+.icone_login img{
+    width: 24px;
+    height: 24px;
+}
+
+.login_inputs{
+    height: 50px;
+    width: 300px;
+    margin-left: 0px;
+    float: left;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+
+#btn_login{
+    height: 50px;
+    width: 350px;
+    border: 0px;
+    background-color: #31aa40;
+    color:white;
+    border-radius: 4px;
+    cursor:pointer;
+
+}
+
+#icone_erro{
+    
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding: 12px;
+    float: left;
+    
+    background-color: #c41737;
+    margin-bottom: 20px;
+}
+
+#mensagem_erro{
+    width: 300px;
+    height: 50px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 12px;
+    float: left;
+    border: 1px solid #c41737;
+    margin-bottom: 20px;
+    color: #c41737;
+    
+}
+
+.erro_login{
+    display: none;
+}
+/*** Fim Login ***/
+
+/*** Inicio Cadastro de Usuario **/
+.inputsFiltro{
+    width: 80%;
+    height: 50px;
+    border-radius: 4px;
+    border:1px solid #d1d0d0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    float: left;
+    padding-left: 5px;
+}
+
+#filtroFuncionario{
+    height: 50px;
+    width: 70px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-image: url(../Imagens/icone_pesquisa.png);
+    background-repeat: no-repeat;
+    background-size: 36px;
+    background-color: black;
+    border: 0px;
+    background-position: center;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+#header_tabelaUsuarios, #tabelaUsuarios{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #2f1b1b;
+}
+
+#tabelaUsuarios{
+    min-height: 60px;
+    overflow: auto;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+#header_tabelaUsuarios{
+    height: 70px;
+    background-color: #2f1b1b;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-top: 20px;
+}
+
+#header_tabelaUsuarios .coluna-03{
+    color:white;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+}
+
+.item_tabelaUsuarios:hover{
+    background-color: #f8dddd;
+}
+
+.item_tabelaUsuarios{
+    height: 60px;
+    cursor: pointer;
+    
+}
+
+.item_tabelaUsuarios .coluna-03{
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    
+}
+
+.inputs_informacoes{
+    width: 90%;
+    height: 50px;
+    border-radius: 4px;
+    border:1px solid #e2dddd;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #e2dddd;
+    line-height: 45px;
+    vertical-align: middle;
+
+}
+
+.cadastroUsuario_inputs{
+    height: 50px;
+    width: 85%;
+    margin-left: 0px;
+    float: left;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+
+.selectNivel{
+    height: 80px;
+    width: 22%;
+    margin-right: 3%;
+    border:1px solid #d4cccc;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 18px;
+    
+    
+}
+
+.checkbox_permissoes{
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-top: 12px;
+}
+
+
+.nomePermissao{
+    float: left;
+    margin-left: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+.btn_cadastro{
+    height: 60px;
+    width: 20%;
+    margin-top: 20px;
+    border: 0px;
+    background-color: #31aa40;
+    color:white;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor:pointer;
+    float: right;
+   
+}
+
+
+
+/*** Fim Cadastro de Usuário ***/
+
+/*** Início Fale Conosco ***/
+
+.header_faleConosco{
+    width: 90%;
+    height: 70px;
+    background-color: #2f2b2b;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #2f2b2b;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding-right: 5px;
+}
+
+.caixa_faleConosco{
+    width: 90%;
+    min-height: 350px;
+    height: auto;
+    border: 1px solid #2f2b2b;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    
+}
+
+.header_faleConosco .coluna-05{
+    text-align: center;
+    color:white;
+    line-height: 55px;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.coluna_imagens img{
+    width: 42px;
+    height: 42px;
+}
+
+.coluna_imagens{
+    height: 70px;
+    text-align: center;
+}
+
+.coluna_imagens:hover{
+    background-color: #413d3d;
+    cursor: pointer;
+}
+
+.caixa_faleConosco .coluna-04{
+    font-size: 22px;
+}
+
+.caixa_faleConosco .coluna-04 strong{
+    font-size: 20px;
+    color:#403636;
+}
+
+.faleConosco_titulo{
+    text-align: center;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:#403636;
+}
+
+.mensagem_faleConosco{
+    padding: 15px;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: justify;
+    min-height: 100px;
+    overflow: auto;
+}
+/*** Fim fale conosco ***/
+
+
+/*** Formatação da Tabela de Visualização Padrão ***/
+
+.header_tabela{
+    
+    width: 90%;
+    height: 70px;
+    background-color: #2f2b2b;
+    margin-left: 20px;
+    border: 1px solid #2f2b2b;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+   text-align: center;
+    
+    line-height: 70px;
+    vertical-align: middle;
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.tabela{
+    width: 90%;
+    min-height: 300px;
+    height: auto;
+    border: 1px solid #2f2b2b;
+    margin-top: 0px;
+    margin-left: 20px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    float: left;
+    margin-bottom: 25px;
+    
+}
+
+.caixa_opcoesTabela{
+    width: 5%;
+    float: left;
+    margin-left: 0px;
+    height: auto;
+    border-top: 1px solid #ddd4d4;
+    border-bottom: 1px solid #ddd4d4;
+    border-right: 1px solid #ddd4d4;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 2px;
+    
+}
+
+.icone_opcoes{
+    height: 60px;
+    text-align: center;
+    
+}
+
+.icone_opcoes:hover{
+    background-color: #f2eeee;
+    cursor: pointer;
+    
+}
+
+.icone_opcoes img{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.tabela .linha{
+    width: 100%;
+    min-height: 50px;
+    height: auto;
+    
+}
+
+.imagem_tabela{
+    min-height: 270px;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.imagem_tabela img, .imagem_tabela{
+    max-width: 80%;
+    height: 250px;
+}
+
+.topico_tabela{
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    height: 40px;
+}
+
+.descricao_tabela{
+    padding: 15px;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: justify;
+    min-height: 100px;
+    overflow: auto;
+}
+
+/*** Fim Tabela de Visualização Padrão  ***/
+
+
+/*** Inicio Formatação dos formulários - Dicas de Saúde***/
+
+
+.label_formulario{
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.formularios{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.formularios_imagens{
+    width: 280px;
+    height: 260px;
+    border:1px solid #e2d8d8;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.formularios_imagens img{
+    width: 280px;
+    height: 260px;
+    border-radius: 5px;
+}
+
+#labelFile img{
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#labelFile label{
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#labelFile{
+    width: 280px;
+    height: 70px;
+    background-color: #7e3939;
+    border: 0px;
+    color:white;
+    line-height: 60px;
+    vertical-align: middle;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#fileImagem{
+    display: none;
+}
+
+.inputs_formulario{
+    width: 90%;
+    height: 50px;
+    border-radius: 4px;
+    border:1px solid #e6e5e5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#formulario_textarea{
+    width: 90%;
+    height: 250px;
+    padding: 10px;
+    resize: none;
+    border-radius: 4px;
+    border:1px solid #e6e5e5;
+}
+
+.salvarCadastro, .cancelar_cadastro{
+    width: 280px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    vertical-align: middle;
+    color:white !important;
+    border: 0px;
+    border-radius: 6px;
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 8%;
+    background-color: #0a740a;
+    float: right;
+}
+
+/*** Fim Formatação dos formulários - Dicas de Saúde***/

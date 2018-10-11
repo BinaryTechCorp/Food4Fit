@@ -1,0 +1,1203 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Verdana", Gadget, sans-serif;
+    font-size: 16px;
+    outline: none;
+    text-decoration: none;
+  /* border: 1px solid black;*/
+}
+:root{
+   --verde-escuro:#184d16;
+   --verde-claro: #749979;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+    outline: none;
+    /*background-color: #F2F2F2;*/
+    background-color: #faf9f9;
+}
+
+h1{
+    font-weight: normal;
+}
+
+a:visited, a:link, a:active {
+    color: white;
+}
+
+input, textarea, button {
+    outline: none;
+    border: 1px solid #e0d6d6;
+
+}
+
+input:hover, input:focus, input:active, textarea:hover, textarea:focus, textarea:active {
+    -webkit-box-shadow: 0px 0px 4px 2px #e0d6d6;
+    box-shadow: 0px 0px 4px 2px #e0d6d6;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.linha::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="coluna-"] {
+    float: left;
+    padding: 10px;
+}
+
+.coluna-01 {
+    width: 8.33%;
+}
+.coluna-02 {
+    width: 16.66%;
+}
+.coluna-03 {
+    width: 25%;
+}
+.coluna-04 {
+    width: 33.33%;
+}
+.coluna-05 {
+    width: 41.66%;
+}
+.coluna-06 {
+    width: 50%;
+}
+.coluna-07 {
+    width: 58.33%;
+}
+.coluna-08 {
+    width: 66.66%;
+}
+.coluna-09 {
+    width: 75%;
+}
+.coluna-10 {
+    width: 83.33%;
+}
+.coluna-11 {
+    width: 91.66%;
+}
+.coluna-12 {
+    width: 100%;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.direita {
+    float: right;
+}
+/**/
+#nav_paginas, #frm_faleConosco, #frm_login {
+	max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.faleConosco_inputs, .login_inputs, .perfilUsuario_input, .inputs{
+	width: 100%;
+	height: 45px;
+	border-radius: 6px;
+	margin-top: 10px;
+}
+
+.labels_formulario{
+	font-weight: bold;
+
+}
+
+#caixa_principal{
+	max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+/**/
+
+/*** In��cio - Cabe�alho ***/
+header {
+    width: 100%;
+}
+
+.itens_cabecalho {
+	border-right: 1px solid #e0d6d6;
+    text-align: center;
+    cursor: pointer;
+    height: 80px;
+    padding-top: 0px;
+}
+
+
+.icones{
+	 border: none;
+     width: 40px;
+     height: 40px;
+     margin-top: 30px;
+}
+
+.logo_site {
+	color: #31aa40;
+    font-size: 45px;
+    font-family: "Comic Sans MS";
+}
+
+#menu_paginas {
+	background-color: var(--verde-escuro);
+    min-height: 70px;
+	height: auto;
+    margin-top: 10px;
+}
+
+.item_menu{
+	min-width: 45px;
+    height: 50px;
+    float: left;
+    font-size: 18px;
+    /*border: 1px solid #FFFFFF;*/
+    margin-right: 2%;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+.menu_usuario {
+	width: 300px;
+    min-height: 210px;
+    padding: 20px;
+    height: auto;
+    position: absolute;
+    right: 0px;
+    margin-top: 15px;
+    margin-right: 3px;
+    background-color: #f5f0f0;
+    display: none;
+}
+
+.botoes_usuario {
+	width: 100%;
+    height: 50px;
+    background-color: #333333;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+    color:#FFFFFF;
+    font-size: 16px;
+}
+
+.quantidade_carrinho {
+	width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: var(--verde-claro);
+    margin-left: 80%;
+    color:#FFFFFF;
+    line-height: 30px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.area_carrinho {
+	height: 100%;
+    width: 100%;
+    top: 0px;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(230, 210, 210, 0.5);
+    display: none;
+}
+
+.sair_carrinho {
+    height: 10%;
+    width: 70%;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 500px;
+}
+
+
+.lista_pedidos{
+    min-height: 300px;
+	height: auto;
+    width: 25%;
+    background-color: #749979;
+    right: 0px;
+	margin-right: 2%;
+	margin-top: 110px;
+    color: white;
+	display: none;
+	position: absolute;
+	border-radius: 10px;
+}
+
+.lista_pedidos img{
+	right: 0px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.titulo_area{
+    font-size: 45px;
+    font-family: "Comic Sans MS";
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input_pesquisa{
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+    border-radius: 3px;
+    padding-left: 5px;
+
+}
+
+.frm_pesquisa{
+    display: none;
+}
+
+
+#cabecalho_paginas{
+    background-color: #90ad95;
+    height: 100px;
+    width: 100%;
+    overflow: auto;
+
+}
+
+#linha_fundo{
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+
+}
+
+#nome_pagina{
+    min-width: 40%;
+    width: auto;
+    height: 70px;
+    position: absolute;
+    background-color: #90ad95;
+    margin-top: 20px;
+    color:white;
+    font-family: "Comic Sans MS";
+    font-size: 35px;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+
+
+}
+/*** Fim - Cabeçalho ***/
+
+/** Início - Básico ***/
+main {
+    width: 100%;
+    min-height: 700px;
+    overflow: hidden;
+}
+
+section {
+    padding-bottom: 0px;
+/*    min-height: 780px;*/
+    height: auto;
+    /* overflow: hidden; */
+    background-color: white;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    padding-top: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    float: left;
+}
+/** Fim - Básico ***/
+
+/*** Inicio Fale Conosco ***/
+
+#frm_faleConosco{
+	background-color: #f8f2f2;
+	margin-top: 20px;
+	border-radius: 10px;
+}
+
+
+#frm_faleConosco textarea, #textarea_perfil, #textarea_diario, .textarea_personal {
+	width: 100%;
+	height: 130px;
+	border-radius: 6px;
+	margin-top: 10px;
+	resize: none;
+    padding: 10px;
+}
+
+#submit_faleConosco{
+	width: 100%;
+	height: 60px;
+	border-radius: 6px;
+	background-color: #101010;
+	color:#ffffff;
+	cursor: pointer;
+}
+
+
+/*** Fim Fale Conosco ***/
+
+
+/*** Login  ****/
+#frm_login{
+	background-color: #f4f4f4;
+	margin-top: 20px;
+	/*border-radius: 10px;*/
+}
+
+.topico_login{
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+.checkbox{
+	margin-top: 15px;
+	margin-bottom: 15px;
+
+}
+
+#submit_login, .links{
+	width: 100%;
+	height: 60px;
+	border-radius: 6px;
+	background-color: #101010;
+	color:#ffffff;
+	cursor: pointer;
+	text-align: center;
+	line-height: 60px;
+	vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+.btnSalvar{
+    background-color: #31bf4c !important;
+    float: right;
+    max-width: 200px;
+}
+
+.links{
+	margin-top: 50px;
+}
+
+.icones_redesSociais{
+	margin-top: 10px;
+	text-align: center;
+	height: 40px;
+	/*border-radius: 5px;*/
+
+}
+
+#facebook{
+	background-color: #0d1ff2;
+}
+
+#google{
+	background-color: #e0dcdc;
+}
+
+
+
+
+/*** Fim login ****/
+
+
+/*** Inicio Perfil do Usuario ***/
+#img_usuario, #img_usuario img{
+    width: 100%;
+    height: 280px;
+
+}
+
+.radio{
+    width: 25px;
+    height: 25px;
+}
+
+#img_usuario{
+    border:1px solid #ddd6d6;
+    margin-top: 10px;
+}
+
+/*** Fim Perfil do Usuario ***/
+
+/*** Detalhes do Prato ***/
+.detalhes_imgPrato, .detalhes_imgPrato img{
+    width: 500px;
+    height: 600px;
+    /*background-color: aqua;*/
+}
+
+#detalhes_nomePrato{
+    height: 250px;
+    font-size: 30px;
+    color: #d6a829;
+    text-transform: uppercase;
+    margin-top: 50px;
+
+}
+
+.detalhes_preco{
+    height: 100px;
+    font-size: 35px;
+    color: #096a05;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    margin-top: 10px;
+    font-weight: bold;
+
+}
+
+.detalhes{
+    height: 100px;
+    margin-top: 10px;
+     /*background-color: antiquewhite;*/
+}
+
+.detalhes .inputs{
+    height: 60px !important;
+    font-size: 22px;
+}
+
+.detalhes .produto_quantidade, .detalhes .produto_comprar{
+    width: 45%;
+    float: left;
+    height: 60px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    line-height: 60px;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.detalhes .produto_quantidade{
+    background-color: #817e7e;
+    margin-right: 10%;
+}
+
+.detalhes .produto_comprar{
+    background-color: #29b253;
+}
+
+.detalhes option{
+    height: 60px;
+    font-size: 22px;
+}
+
+#titulo_detalhes{
+    font-size: 30px;
+    color: #d6a829;
+}
+
+#detalhes_separador{
+    border-color: #47d35d;
+    margin-bottom: 15px;
+}
+
+.detalhes_descProduto{
+    margin-top: 15px;
+    color: #5a5858;
+    margin-bottom: 50px;
+}
+
+#tabela{
+    border: 2px solid #524a4a;
+    padding: 0px;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 10%;
+
+
+}
+
+#tabela .informacoes:hover{
+    background-color: #e0dada;
+}
+
+.tabela_topico{
+    color: white;
+    height: 40px;
+    background-color: #524a4a;
+   /* font-weight: bold;*/
+}
+
+
+/*** FIM Detalhes do Prato***/
+
+
+/*** Diário de Bordo ***/
+#explicacao_pagina{
+    height: 100px;
+    border: 1px solid #eae8e8;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+#explicacao_pagina .coluna-02{
+    text-align: center;
+}
+
+#explicacao_pagina .coluna-10, #topico_diario{
+    color: #a29e9e;
+    min-height: 30px;
+    height: auto;
+    line-height: 30px;
+    vertical-align: middle;
+
+}
+
+#explicacao_pagina .coluna-10{
+    font-style: italic;
+}
+
+#submit_diario{
+    width: 250px;
+	height: 50px;
+	border-radius: 6px;
+	background-color: #101010;
+	color:#ffffff;
+	cursor: pointer;
+	text-align: center;
+	line-height: 50px;
+	vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+
+/*** Fim Diário de Bordo ***/
+
+/*** Meu Personal Fitness ***/
+.personal_nomePrato{
+    color: #84aa49;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.quantidade_curtidas{
+    color: #c4bfbf;
+    font-style: italic;
+    margin-left: 15px;
+}
+
+
+.icones_curtir{
+    cursor: pointer;
+}
+
+.linha_imagem img{
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+}
+
+.linha_imagem{
+    border:1px solid #ebe9e9;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    min-height: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.personal_imagemUsuario img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+
+.personal_imagemUsuario{
+    border:1px solid #d3caca;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    text-align: center;
+    float: right;
+
+}
+
+.personal_separador{
+    border:1px solid #d3caca;
+    margin-bottom: 60px;
+    width: 80%;
+    clear: both;
+    margin-left: 5%;
+}
+
+
+/*** Fim Meu Personal Fitness ***/
+
+/*** Início - Casos de Sucesso ***/
+.linha-nome{
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.texto{
+    height: 255px;
+    padding-top: 5px;
+    padding-left: 2px;
+    line-height: 22px;
+    text-align: justify;
+
+
+}
+
+.titulo{
+    font-size: 20px;
+    font-weight: bold;
+
+
+}
+
+.titulo-centro{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.foto{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 200px;
+    margin-top: 5px;
+    border: solid 1px;
+    overflow: hidden;
+}
+/*** Fim - Casos de Sucesso ***/
+
+/*** Início - Vantagens e Benefícios ***/
+.margin_t_10{
+    margin-top: 10px;
+}
+
+.margin_t_15{
+    margin-top: 15px;
+}
+
+.margin_t_25{
+    margin-top: 25px;
+}
+
+.margin_t_50{
+    margin-top: 50px;
+}
+
+.margin_t_230{
+    margin-top: 230px;
+}
+
+.foto-quadrada{
+    width: 465px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+/*    border-radius: 200px;*/
+    margin-top: 5px;
+    border: solid 1px;
+}
+
+/*** Fim - Vantagens e Benefícios ***/
+
+/*** Início - Dicas de Saúde ***/
+.centro_lr{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.foto-quadrada{
+    width: 465px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+/*    border-radius: 200px;*/
+    margin-top: 5px;
+    border: solid 1px;
+}
+
+.faixa-verde{
+    width: 464;
+    height: 20px;
+    background-color: darkgreen;
+
+}
+
+.titulo-centro{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.texto-caixa-pequena{
+    height: 180px;
+    padding-top: 5px;
+    padding-left: 2px;
+    line-height: 22px;
+    text-align: justify;
+
+
+}
+
+.linha-divisao{
+    width: 650px;
+    background-color: darkgreen;
+    border: solid 1px darkgreen;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/*** Fim - Dicas de Saúde ***/
+
+
+/*** Página dos Produtos ***/
+#produtos_menuLateral{
+    width: 100%;
+    min-height: 200px;
+    border:1px solid #d3caca;
+}
+
+.item_categoria{
+    width: 100%;
+    height: 50px;
+    border-left: 6px solid #ea8a08;
+    margin-bottom: 10px;
+    color: #ea8a08;
+    background-color: #ffe1a9;
+}
+
+
+
+/*** Fim Página dos Produtos ***/
+
+/*** Início da página de cadastro ***/
+.formulario_cadastro{
+    background-color: #f8f2f2;
+    border-radius: 6px;
+}
+
+.formulario_cadastro input[type=text], input[type=tel], textarea, select{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.formulario_cadastro textarea {
+	resize: none;
+    min-height: 150px;
+}
+
+.formulario_cadastro span {
+	font-weight: bold;
+}
+/*** Fim da página de cadastro ***/
+
+
+/*** Início - Modal ***/
+.modal{
+    margin-top: 10%;
+    position: relative;
+    z-index: 1000;
+    height: 60%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.container_modal{
+    height: 100%;
+    z-index: 999;
+    position: relative;
+    display: none;
+    background-color: rgba(0,0,0,0.3);
+}
+/*** Fim - Modal ***/
+
+/*** Início - Fórum ***/
+.conteudo_forum {
+	border: 2px solid black;
+}
+
+.conteudo_forum button{
+	width: 15%;
+    min-height: 45px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+}
+
+.publi_dados{
+    border: 1px solid black;
+    min-width: 16.66%;
+    min-height: 5%;
+}
+
+.publi_texto {
+    min-height: 6%;
+}
+
+/*
+.publi_dados{
+    width: 12%;
+}
+*/
+
+.publi_dados p{
+    text-align: center;
+}
+
+.publicacao{
+    border: 1px solid black;
+}
+/*** Fim - F�ruum ***/
+
+/*** In�cio - Home ***/
+
+/** In�cio - Slide **/
+#slide{
+    height: 720px;
+    padding: 0px;
+}
+.fotos_slide{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/** Fim - Slide **/
+/*** In�cio - Cards Menu ***/
+#cards{
+    background-color: var(--verde-claro);
+}
+.card_menu{
+    max-width: 260px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card_menu a{
+    margin-bottom: 50px;
+}
+/*** Fim - Cards Menu ***/
+
+/*** Início - Cards Categorias ***/
+.card_categoria{
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    border: 1px solid var(--verde-escuro);
+}
+.card_categoria_foto{
+   width: 265px;
+    height: 150px;
+    margin: 5px auto;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/*** Fim - Cards Categorias ***/
+
+/*** Início - Sobre Nós ***/
+.linha_titulo_principal{
+    padding: 20px;
+}
+.titulo_principal{
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+}
+.titulo_secundario{
+    width: 240px;
+    text-align: center;
+    font-size: 20px;
+    margin-left: calc(50% - 120px);
+    padding-bottom: 10px;
+}
+.sobre_foto{
+    border-radius: 8px;
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.espaco{
+    height: 20px;
+}
+/*** Fim - Sobre Nós ***/
+
+/*** Início - Sobre Entregas ***/
+#mapaHome{
+    width: 100%;
+    height: 550px;
+}
+/*** Fim - Sobre Entregas ***/
+
+/*** Início - Fornecedores ***/
+.fornecedores_capa{
+    width: 100%;
+    height: 600px;
+    background-image: url("../media/img/home/fornecedores00.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.card_fornecedor{
+    border-radius: 10px;
+    width: 600px;
+    height: 200px;
+    margin: 100px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid var(--verde-escuro);
+}
+/*** Fim - Fornecedores ***/
+/*** Fim - Home ***/
+/*** P�gina dos Produtos ***/
+#produtos_menuLateral{
+    width: 100%;
+    min-height: 400px;
+   /* border:1px solid #d3caca;*/
+}
+
+.item_categoria{
+    width: 100%;
+    min-height: 45px;
+    height: auto;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+}
+
+
+.nomeCategoria{
+    width: 100%;
+    height: 45px;
+    color: #ea8a08;
+    background-color: #ffffff;
+    text-align: center;
+    line-height: 45px;
+    vertical-align: middle;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+    border-left: 3px solid #d19712;
+}
+
+.subcategoria{
+    width: 80%;
+    min-height: 200px; 
+    height: auto;
+    background-color: white;
+    margin-left: 20%;
+    display: none;
+   
+    
+}
+
+.subcategoria_item{
+
+    height: 45px;
+    color:#238810;
+    line-height: 45px;
+    vertical-align: middle;
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+.item_categoria:hover>.subcategoria{
+    display: inline;
+    
+}
+
+.subcategoria_item:hover{
+    font-size: 18px;
+}
+
+#produto_promocoes .produtos_linha_fundo{
+    background-color: #ea8a08 !important;
+}
+
+.produtos_linha_fundo{
+    width: 90%;
+    height: 2px;
+    background-color: #184d16;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+#produtos_destaques, .produtos_gerais{
+    height: 100px;
+    width: 100%;
+    overflow: auto;
+}
+
+.titulo_sessao{
+    min-width: 40%;
+    width: auto;
+    height: 70px;
+    position: absolute;
+    background-color: #faf9f9;
+    margin-top: 20px;
+    margin-left: 10%;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+.topico_produtos, .topico_destaque, .topico_categoria{
+    font-family: "Comic Sans MS";
+    font-size: 35px;
+}
+
+
+.topico_produtos{
+    color:#7b7b7b;
+    
+    
+}
+
+.topico_destaque{
+    color: #d19712;
+}
+
+#produtos_destaques .produtos_linha_fundo{
+    background-color: #d19712 !important;
+}
+
+.topico_categoria{
+    color:#1b4719;
+}
+
+.slider_botao{
+    width: 5%;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    color:white;
+    font-weight: bold;
+    font-size: 22px;
+    vertical-align: middle;
+    background-color: var(--verde-escuro);
+    border-radius: 8px;
+    cursor: pointer;
+    border:none;
+    float: left;
+    margin-top: 100px;
+}
+.slider_botao:hover{
+    box-shadow: none !important;
+}
+.caixa_produtos{
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+    min-height: 360px;
+   /* background-color: pink;*/
+    float: left;
+}
+.produtos_item{
+    background-color: white;
+    min-height: 400px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px !important;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ded7d7;
+}
+.produtos_item img{
+    width: 280px;
+    height: 250px;
+}
+.nomeProduto, .precoProduto{
+    text-align: center;
+    color:#749979;
+    
+    word-break: break-all;
+    width: 100%;
+}
+.nomeProduto{
+    height: 100px;
+    font-size: 20px;
+}
+.precoProduto{
+    font-weight: bold;
+    font-size: 24px;
+}
+.produtos .produto_quantidade, .produtos .produto_comprar{
+    width: 45%;
+    float: left;
+    height: 50px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.produtos .produto_quantidade{
+    background-color: #817e7e;
+    margin-right: 10%;
+}
+.produtos .produto_comprar{
+    background-color: #29b253;
+}
+.produtos option{
+    height: 50px;
+    font-size: 18px;
+}
+.produtos .produto_comprar img{
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin-top: 10px;
+/*** Fim - Produtos ***/
