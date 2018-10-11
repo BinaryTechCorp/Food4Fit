@@ -281,6 +281,70 @@ header {
     
 }
 
+/*** Formatação tabela de usuários do cms ***/
+#tabelaUsuariosView{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 80px;
+	height:auto;
+	border-bottom-left-radius: 6px;
+	border-bottom-rigth-radius: 6px;
+	border:1px solid #232121;
+	padding-bottom: 5px;
+}
+
+.topicoViewUsuarios{
+	float: left;
+	height: 50px;
+	color:white;
+	line-height: 45px;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+    background-color: #232121;
+}
+
+#header_tabelaUsuariosView{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	border:0px;
+	margin-bottom: 0px;
+	height: 70px;
+	padding: 5px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	background-color: #232121;
+}
+
+.info{
+	height: 50px;
+	padding: 5px;
+}
+
+.info_img{
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+.itemViewUsuario:hover{
+	background-color: #1f131326;
+	cursor:pointer;
+}
+
+.info_opcoes{
+	padding-left: 20px;
+}
+
+/*** fim - Formatação tabela de usuários do cms **/
 
 /*** FIM - Index ***/
 
@@ -485,8 +549,8 @@ footer {
     word-break: break-all;
     white-space: nowrap;
     overflow: hidden;
-    
-    
+    vertical-align: center;
+    text-align: center;
 }
 
 .inputs_informacoes{

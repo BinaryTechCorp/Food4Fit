@@ -1,7 +1,5 @@
 package br.com.binarytech.dao;
 
-
-import java.security.KeyStore.ProtectionParameter;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -58,8 +56,6 @@ public class TelefoneDAO {
 		Telefone telefone = new Telefone();
 		
 		String sql = "SELECT * FROM telefone WHERE idExterno = ? AND idTipo = ? AND contato = 'PRINCIPAL'";
-		System.out.println("IdTipo: " + idTipo + " idExterno: " + idExterno);
-		
 		try {
 			PreparedStatement str = BancoWEB.abrirConexao().prepareStatement(sql);
 			str.setInt(1, idExterno);

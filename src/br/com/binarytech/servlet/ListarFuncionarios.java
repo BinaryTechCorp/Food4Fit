@@ -42,8 +42,7 @@ public class ListarFuncionarios extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		System.out.println("Chegou aqui");
+
 		
 		PrintWriter printer = response.getWriter();
 
@@ -55,27 +54,9 @@ public class ListarFuncionarios extends HttpServlet {
 
 			Funcionario funcionario = FuncionarioDAO.listarByIdCMS(idFuncionario);
 			
-			printer.println("<div class=\"linha item_tabelaUsuarios\" onclick = 'DetalharFuncionario(" + funcionario.getIdFuncionario() + ")'> " + 
-					"                <div class=\"coluna-03 codigoFuncionario\">" + 
-					funcionario.getIdFuncionario() + 
-					"                </div>" +
-					"                <div class=\"coluna-03\">" + 
-					funcionario.getNome() +
-					"                </div>"+
-					"                <div class=\"coluna-03\">" + 
-					funcionario.getEmail() + 
-					"                </div>" + 
-					"                <div class=\"coluna-03\">" + 
-					funcionario.getCargo() +  
-					"                </div>" + 
-					"            </div>");
-			
-		} else {
-			//select by cargo
-			
-			ArrayList<Funcionario> lista = FuncionarioDAO.listarByCargoCms(idCargo);
-			
-			for (Funcionario funcionario : lista) {
+			if(funcionario.getNome() == null) {
+				printer.print("<div class='linha'> Nenhum registro encontrado. </div>");
+			} else {
 				printer.println("<div class=\"linha item_tabelaUsuarios\" onclick = 'DetalharFuncionario(" + funcionario.getIdFuncionario() + ")'> " + 
 						"                <div class=\"coluna-03 codigoFuncionario\">" + 
 						funcionario.getIdFuncionario() + 
@@ -92,6 +73,32 @@ public class ListarFuncionarios extends HttpServlet {
 						"            </div>");
 			}
 
+		} else {
+			//select by cargo
+			
+			ArrayList<Funcionario> lista = FuncionarioDAO.listarByCargoCms(idCargo);
+			
+			if(lista.isEmpty()) {
+				printer.print("<div class='linha'> Nenhum registro encontrado. </div>");
+			} else {
+				for (Funcionario funcionario : lista) {
+					printer.println("<div class=\"linha item_tabelaUsuarios\" onclick = 'DetalharFuncionario(" + funcionario.getIdFuncionario() + ")'> " + 
+							"                <div class=\"coluna-03 codigoFuncionario\">" + 
+							funcionario.getIdFuncionario() + 
+							"                </div>" +
+							"                <div class=\"coluna-03\">" + 
+							funcionario.getNome() +
+							"                </div>"+
+							"                <div class=\"coluna-03\">" + 
+							funcionario.getEmail() + 
+							"                </div>" + 
+							"                <div class=\"coluna-03\">" + 
+							funcionario.getCargo() +  
+							"                </div>" + 
+							"            </div>");
+				}
+
+			}
 		}
 		
 	}

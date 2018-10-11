@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.binarytech.dao.FuncionarioDAO;
 import br.com.binarytech.dao.TelefoneDAO;
+import br.com.binarytech.dao.UsuarioCmsDAO;
 import br.com.binarytech.model.Funcionario;
 import br.com.binarytech.model.Telefone;
 
@@ -50,22 +51,37 @@ public class DetalharFuncionario extends HttpServlet {
 		
 		Funcionario funcionario = FuncionarioDAO.listarByIdCMS(idFuncionario);
 		
-		System.out.println(funcionario);
+		//Verifica se o funcionário já possui é cadastrado no CMS
+		Boolean existe = UsuarioCmsDAO.verificarFuncionario(idFuncionario);
 		
-		//Pegando o telefone principal do funcionario
-		int idTipo = 1; // TIPO = FUNCIONARIO
-		Telefone telefonePrincipal = TelefoneDAO.buscarPrincipal(idFuncionario, idTipo);
-		
-		printer.println(""
-				+ "<script>"
-				+ "$('#usuarioNome').html('"+funcionario.getNome()+"');"
-				+ "$('#usuarioEmail').html('"+funcionario.getEmail()+"');"
-				+ "$('#usuarioSexo').html('"+funcionario.getSexo()+"');"
-				+ "$('#usuarioRG').html('"+funcionario.getRg()+"');"
-				+ "$('#usuarioTelefone').html('"+telefonePrincipal.getTelefone()+"');"
-				+ "$('#usuarioCargo').html('"+funcionario.getCargo()+"');"
-				+ "$('#formCadastroUsuario').attr('data-idFuncionario', "+ funcionario.getIdFuncionario() + ");"
-				+ "</script>");
+		if(existe) {
+			printer.print("<script> alert('Funcionário já cadastrado no sistema.'); </script>");
+		} else {
+			//Pegando o telefone principal do funcionario
+			int idTipo = 1; // TIPO = FUNCIONARIO
+			Telefone telefonePrincipal = TelefoneDAO.buscarPrincipal(idFuncionario, idTipo);
+			
+			String sexo = "";
+			
+			if(funcionario.getSexo().equals("")) {
+				sexo = "Feminino";
+			}else {
+				sexo = "Masculino";
+			}
+			
+			printer.println(""
+					+ "<script>"
+					+ "$('#usuarioNome').html('"+funcionario.getNome()+"');"
+					+ "$('#usuarioEmail').html('"+funcionario.getEmail()+"');"
+					+ "$('#usuarioSexo').html('"+sexo+"');"
+					+ "$('#usuarioRG').html('"+funcionario.getRg()+"');"
+					+ "$('#usuarioTelefone').html('"+telefonePrincipal.getTelefone()+"');"
+					+ "$('#usuarioCargo').html('"+funcionario.getCargo()+"');"
+					+ "$('#formCadastroUsuario').attr('data-idFuncionario', "+ funcionario.getIdFuncionario() + ");"
+					+ "$(\"#input_login\").prop(\"disabled\", false);"
+					+ "$(\"#input_senha\").prop(\"disabled\", false);" + 
+					"$(\"input[name='permissoes']\").prop(\"disabled\", false);"
+					+ "</script>");
+		}
 	}
-
 }

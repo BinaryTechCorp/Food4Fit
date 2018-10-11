@@ -1,6 +1,7 @@
 package br.com.binarytech.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -47,10 +48,8 @@ public class ListarCargos extends HttpServlet {
 			options += "<option value='"+cargo.getIdCargo()+"'>"+cargo.getCargo()+"</option>/n";
 		}
 		
-		
-		
-		
-	
+		PrintWriter printer = response.getWriter();
+		printer.print(options);
 		
 	}
 

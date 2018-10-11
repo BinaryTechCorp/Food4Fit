@@ -32,6 +32,17 @@
                         }
                     });
                 });
+                
+                $("#visualizarTodosUsuarios").click(function(){
+                    $.ajax({
+                        url:"view/todosUsuarios.jsp",
+                        success: function(data) {
+                            $('#conteudoCms').html(data);
+                        }
+                    });
+                });
+                
+                
                 $("#vantagensBeneficios").click(function(){
                     $.ajax({
                         url:"view/vantagensBeneficios.jsp",
@@ -202,7 +213,7 @@
                         <p id="faleConosco"> Fale Conosco </p>
                     </div>
                     <div class="menu_itens">
-                        <a href="#"> Todos os Usuários </a>
+                        <p id="visualizarTodosUsuarios"> Todos os Usuários </p>
                     </div>
                     <div class="menu_itens">
                         <p id="cadastrarUsuario">Cadastrar Usuário</p>

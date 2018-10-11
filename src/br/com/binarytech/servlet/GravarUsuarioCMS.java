@@ -43,25 +43,28 @@ public class GravarUsuarioCMS extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		//Resgatando os dados mandados
-		int idPermissao = Integer.parseInt(request.getParameter("permissoes[]"));
-		String senha = request.getParameter("senha");
-		
-		String senhaCriptografada = Utilidade.criptografarSenha(senha);
-		
+		int idPermissao = Integer.parseInt(request.getParameter("idPermissao"));
+		int idFuncionario = Integer.parseInt(request.getParameter("idFuncionario"));
 		String login = request.getParameter("login");
+		
+		String senha = request.getParameter("senha");
+		String senhaCriptografada = Utilidade.criptografarSenha(senha);
 		
 		UsuarioCms usuario = new UsuarioCms();
 		usuario.setStatus(false);
 		usuario.setSenha(senhaCriptografada);
 		usuario.setLogin(login);
 		usuario.setIdPermissao(idPermissao);
+		usuario.setIdFuncionario(idFuncionario);
 		
-		Boolean sucesso = UsuarioCmsDAO.gravar(usuario);
+		int sucesso = UsuarioCmsDAO.gravar(usuario);
 		
 		PrintWriter printer = response.getWriter();
 		
-		if(sucesso) {
-			printer.println("<script> alert('Gravou'); </script> ");
+		if(sucesso > 0) {
+			printer.println("<script> "
+					+ "alert('Gravou');"
+					+ " </script> ");
 		} else {
 			printer.println("<script> alert('Não - Gravou'); </script> ");
 		}

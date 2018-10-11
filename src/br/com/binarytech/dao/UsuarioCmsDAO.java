@@ -1,18 +1,18 @@
 package br.com.binarytech.dao;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import br.com.binarytech.jdbc.BancoWEB;
-=======
->>>>>>> origin/master
 import br.com.binarytech.model.UsuarioCms;
 
 public class UsuarioCmsDAO{
 
-	public static Boolean gravar(UsuarioCms usuarioCms){
+	public static int gravar(UsuarioCms usuarioCms){
 		
-		Boolean sucesso = false;
+		int sucesso = 0;
 
 		String sql = "INSERT INTO usuario_cms SET idFuncionario = ?, idPermissao = ?, status = ?, senha = ?, login = ?";
 		
@@ -25,7 +25,7 @@ public class UsuarioCmsDAO{
 			str.setString(4, usuarioCms.getSenha());
 			str.setString(5, usuarioCms.getLogin());
 			
-			sucesso = str.execute();
+			sucesso = str.executeUpdate();
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -70,10 +70,56 @@ public class UsuarioCmsDAO{
 		
 	} 
 
-	public static UsuarioCms listar(){ 
+	public static ArrayList<UsuarioCms> listar(){ 
 		
-		return new UsuarioCms();
+		ArrayList<UsuarioCms> lista = new ArrayList<>();
 		
-	}    
+		String sql = "SELECT u.*, p.area FROM usuario_cms AS INNER JOIN permissao AS p ON u.idPermissao = p.idPermissao; ";
+		
+		try {
+			PreparedStatement str = BancoWEB.abrirConexao().prepareStatement(sql);
+			
+			ResultSet rs = str.executeQuery();
+			
+			while(rs.next()) {
+				UsuarioCms usuario = new UsuarioCms();
+				
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		BancoWEB.fecharConexao();
+		
+		return lista;
+		
+	}
+	
+	public static Boolean verificarFuncionario(int idFuncionario) {
+		Boolean existe = false;
+		
+		String sql = "SELECT * FROM usuario_cms WHERE idFuncionario = ?";
+		
+		try {
+			PreparedStatement str = BancoWEB.abrirConexao().prepareStatement(sql);
+			str.setInt(1, idFuncionario);
+			
+			ResultSet rs = str.executeQuery();
+			
+			if(rs.next()) {
+				existe = true;
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		BancoWEB.fecharConexao();
+		
+		return existe;
+	}
 
 }
