@@ -40,6 +40,15 @@
                             $('#conteudoCms').html(data);
                         }
                     });
+                    
+                    $.ajax({
+                    	type:"POST",
+                        url:"../../ListarUsuariosCMS",
+                        success: function(data) {
+                            $('#tabelaUsuariosView').html(data);
+                        }
+                    });
+                    
                 });
                 
                 

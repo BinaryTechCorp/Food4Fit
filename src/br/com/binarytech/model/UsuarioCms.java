@@ -7,6 +7,7 @@ public class UsuarioCms extends Funcionario{
     private Boolean status;
     private String senha;
     private String login;
+    private String area;
     
     
 	public int getIdUsuarioCms() {
@@ -47,6 +48,14 @@ public class UsuarioCms extends Funcionario{
 	
 	public void setLogin(String login) {
 		this.login = login;
+	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
 	}
     
     

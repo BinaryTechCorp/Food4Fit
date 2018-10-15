@@ -283,15 +283,20 @@ header {
 
 /*** Formatação tabela de usuários do cms ***/
 #tabelaUsuariosView{
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-	min-height: 80px;
+	width: 85%;
+	margin-left:10%;
+	min-height: 150px;
 	height:auto;
-	border-bottom-left-radius: 6px;
-	border-bottom-rigth-radius: 6px;
-	border:1px solid #232121;
 	padding-bottom: 5px;
+}
+
+.conteudo_tabela{
+	width: 95%;
+	height: 55px;
+	float: left;
+	padding: 0px;
+	border:1px solid #ddd4d4;
+	margin-bottom: 2px;
 }
 
 .topicoViewUsuarios{
@@ -310,9 +315,8 @@ header {
 }
 
 #header_tabelaUsuariosView{
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
+	width: 81%;
+	margin-left: 10%;
 	border:0px;
 	margin-bottom: 0px;
 	height: 70px;
@@ -325,6 +329,14 @@ header {
 .info{
 	height: 50px;
 	padding: 5px;
+	text-align: center;
+	line-height: 50px;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+    overflow: hidden;
+	
 }
 
 .info_img{
@@ -332,16 +344,37 @@ header {
 	width: 30px;
 	height: 30px;
 	margin-top: 5px;
-	margin-left: 10px;
-}
-
-.itemViewUsuario:hover{
-	background-color: #1f131326;
+	margin-left:15px;
 	cursor:pointer;
 }
 
+.itemViewUsuario:hover{
+	background-color: #efefef;
+	cursor:pointer;
+	border:none;
+}
+
+.icone_status{
+	float:left;
+	width: 5%;
+	height: 55px;
+	border-top: 1px solid #ddd4d4;
+    border-bottom: 1px solid #ddd4d4;
+    border-right: 1px solid #ddd4d4;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-bottom: 2px;
+}
+
+.icone_status img{
+	width: 30px;
+	height: 30px;
+	margin-top:10px;
+	margin-left: 10px;
+}
+
 .info_opcoes{
-	padding-left: 20px;
+	padding-left: 5%;
 }
 
 /*** fim - Formatação tabela de usuários do cms **/

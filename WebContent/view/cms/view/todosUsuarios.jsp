@@ -1,3 +1,9 @@
+<script>
+	function mudarStatus(idUsuario, status){
+		alert("ID:" + idUsuario + " Status: " + status);
+	}
+</script>
+
 <div class="coluna-12">
 	 <div class="linha" id="nome_pagina">
         Todos usuários
@@ -24,35 +30,11 @@
             <div class="coluna-02 topicoViewUsuarios">
             	Opções
             </div>
+            
         </div>
     </div>  
     
     <div id="tabelaUsuariosView">
-    
-    	<div class="linha itemViewUsuario">
-    		<div class="coluna-03 info">
-    		
-    		</div>
-    		
-    		<div class="coluna-03 info">
-    		
-    		</div>
-    		
-    		<div class="coluna-02 info">
-    		
-    		</div>
-    		
-    		<div class="coluna-02 info">
-    		
-    		</div>
-    		
-    		<div class="coluna-02 info_opcoes">
-    			<img src="../media/img/cms/ativo.png" alt="Ativo" class="info_img">
-				 <img src="../media/img/cms/editar.png" alt="Editar" class="info_img">
-				 <img src="../media/img/cms/excluir.png" alt="Excluir" class="info_img">
-    		</div>
-    		
-    	</div>
-    
+    	
     </div> 
 </div>
