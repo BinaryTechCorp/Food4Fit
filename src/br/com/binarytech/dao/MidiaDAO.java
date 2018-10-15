@@ -11,8 +11,30 @@ import br.com.binarytech.model.Midia;
 
 public class MidiaDAO {
 
-	public static Boolean gravar(Midia midia) {
-		return true;
+	public static int gravar(Midia midia) {
+		int sucesso = 0;
+
+		String sql = "INSERT INTO midia SET idTabela = ?, idExterno = ?, titulo = ?, caminho = ?, legenda = ?";
+
+		try {
+			PreparedStatement str = BancoWEB.abrirConexao().prepareStatement(sql);
+			
+			str.setInt(1, midia.getIdTabela());
+			str.setInt(2, midia.getIdExterno());
+			str.setString(3, midia.getTitulo());
+			str.setString(4, midia.getCaminho());
+			str.setString(5, midia.getLegenda());
+			
+			sucesso = str.executeUpdate();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		BancoWEB.fecharConexao();
+
+		return sucesso;
 	}
 
 	public static Boolean editar(Midia midia) {

@@ -64,6 +64,14 @@
                         }
                     });
                 });
+                
+                $("#sobreEntrega").click(function(){
+                    $.ajax({
+                        url:"view/cadastroSobreEntrega.jsp",
+                        success: function(data) {
+                            $('#conteudoCms').html(data);
+                        }
+                    });
             });
         </script>
     </head>
@@ -149,6 +157,9 @@
                     </div>
                     <div class="menu_itens">
                         <a href="#" id="sobreEmpresa"> Sobre a Empresa </a>
+                    </div>
+                    <div class="menu_itens">
+                        <a href="#" id="sobreEntrega"> Sobre a Entrega </a>
                     </div>
                 </div>
             </div>

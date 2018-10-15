@@ -68,7 +68,7 @@ public class GravarSobreEmpresa extends HttpServlet {
 		
 		response.getWriter().write("<script>alert('Deu bom :D');</script>");
 		
-		int sucesso = MidiaDAO.gravar(midia);
+		int sucesso = MidiaDAO.gravar();
 		int sucesso = SobreEmpresaDAO.gravar(informacaoSite);
 		
 		printer.println(sucesso);
