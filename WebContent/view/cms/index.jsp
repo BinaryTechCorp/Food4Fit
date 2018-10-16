@@ -72,6 +72,7 @@
                             $('#conteudoCms').html(data);
                         }
                     });
+                });
             });
         </script>
     </head>

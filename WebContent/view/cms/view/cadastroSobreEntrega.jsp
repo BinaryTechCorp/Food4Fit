@@ -77,14 +77,17 @@
 	</head>
 	<div class="coluna-12">
     <div class="linha" id="nome_pagina">
-        Sobre a Empresa
+        Sobre a Entrega
     </div>
     <form id="formSobreEntrega" name='formSobreEntrega' enctype="multipart/form-data" class="formularios">
 
         <div class="linha">
             <div class="coluna-04">
-                <span class="label_formulario" > Imagem: </span>
-
+                <span class="label_formulario" > Título da Imagem </span>
+                    <input type="text" name="titulo" required class="inputs_formulario" maxlength="50">
+				
+				<label for="titulo" class="label_formulario"> Legenda da Imagem: </label> <br>
+                    <input type="text" name="titulo" required class="inputs_formulario" maxlength="50">
                 <div class="formularios_imagens" id="visualizarImg">
                     <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="Imagem" class="visualizarImg"> 
                 </div>
